@@ -1,7 +1,8 @@
 import axios from 'axios'
 
 const carts = axios.create({
-  baseURL: 'http://localhost:3000/carts',
+  baseURL:
+    `${process.env.baseURL}/carts`,
 })
 
 export default {
