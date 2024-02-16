@@ -24,11 +24,18 @@ export default {
     const product = response.data
     return { product }
   },
-  head: {
-    title: 'Shooping Item',
-    meta: [
-      { hid: 'description', name: 'description', content: `이 상품은 ${this.product.name} 입니다` },
-    ],
+  head() {
+    // 메타정보를 동적으로 보여주려면 head 대신 head() 함수형으로 작성한다
+    return {
+      title: `Shooping Item - ${this.product.name}`,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: `이 상품은 ${this.product.name} 입니다`,
+        },
+      ],
+    }
   },
   methods: {
     addToCart() {
