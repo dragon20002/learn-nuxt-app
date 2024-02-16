@@ -1,4 +1,6 @@
 export default {
+  target: 'static', // 'server' (SSR) | 'static' (SSG)
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'learn-nuxt',
